@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeetUp</title>
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="css/index.js"></script>
+    <script src="https://kit.fontawesome.com/0f1e68f229.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="logo">
+
+                <img src="/css/icon.png" alt="">
+
+                <h3>MeetUP: Share your conversations</h3>
+            </div>
+            <h2>Active</h2>
+            <div class="list">
+                <!-- <li></li>
+                <li></li> -->
+            </div>
+            <button id="chat" onclick="show()">Chat Box </button>
+        </div>
+        <div id="back">
+            <h2>Start Conneting to Your Friends</h2>
+        </div>
+        <div id="send-container">
+            <div class="messagebox">
+                <!-- <div class="message-right">
+                    <h5></h5>
+                    <p></p>
+                </div>
+                <div class="user-joined">
+                    <p></p>
+                </div>
+                <div class="message-left">
+                    <h5></h5>
+                    <p></p>
+                </div> -->
+            </div>
+            <hr>
+
+            <input type="text" id="message-input" name="message" placeholder="Message">
+            <button id="btn" type="button"><i class="fa fa-paper-plane-o"></i></button>
+
+        </div>
+    </div>
+    <script>
+        function show() {
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('send-container');
+            let back = document.getElementById('back');
+            back.style.display = 'none'
+            para.style.display = 'block'
+        }
+    </script>
+
+</body>
+
+</html>
